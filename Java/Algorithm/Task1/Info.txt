@@ -1,0 +1,31 @@
+The makeLooper() function (or make_looper in your language) takes a string (of non-zero length) as an argument. 
+It returns a function. The function it returns will return successive characters of the string on successive invocations. 
+It will start back at the beginning of the string once it reaches the end.
+
+For example:
+
+Supplier<Character> abc = Solution.makeLooper("abc");
+abc.get(); // 'a'
+abc.get(); // 'b'
+abc.get(); // 'c'
+abc.get(); // 'a' (loops back to the first character after reaching the end)
+Different loopers should not affect each other, so be wary of unmanaged global state.
+
+
+
+Функция makeLooper()(или make_looper на вашем языке) принимает в качестве аргумента строку (не нулевой длины). 
+Она возвращает функцию. Возвращаемая ею функция будет возвращать последовательные символы строки при последующих вызовах. 
+По достижении конца строки она начнёт с начала.
+
+Например:
+
+Supplier<Character> abc = Solution.makeLooper("abc");
+abc.get(); // 'a'
+abc.get(); // 'b'
+abc.get(); // 'c'
+abc.get(); // 'a' (возвращается к первому значению после достижения конца)
+
+Различные циклеры не должны влиять друг на друга, поэтому будьте осторожны с неуправляемым глобальным состоянием.
+
+Original source / Первоисточник:
+codewars.com/kata/51fc3beb41ecc97ee20000c3
